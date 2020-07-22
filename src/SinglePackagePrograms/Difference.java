@@ -10,13 +10,14 @@ public class Difference {
                 "a ' and a \"?  Or between a \" and a \\\"?";
         String stringAnswer = "One is what we see when we're typing our program.\n" +
                 "The other is what appears on the \"console.\"";
+
         Scanner input;
         input = new Scanner(System.in);
         System.out.println(stringQuestion);
         String userAnswer = input.next();
         input.close();
-
-        System.out.println(stringAnswer);
+        System.out.println("You said: " + userAnswer);
+        System.out.println("The answer: " + stringAnswer);
     }
 }
 
