@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+public class Main extends JavaToJavaScript{
 
     public static void main(String[] args ) {
 
@@ -45,8 +45,10 @@ public class Main {
         }
 
         for(int i = 0; i < splitJavaLines.size(); i++) {
-            System.out.println(splitJavaLines.get(i));
+            //System.out.println(splitJavaLines.get(i));
+            System.out.println(translateJavaLineToJavaScript(splitJavaLines.get(i)));
         }
+
 
 
     }

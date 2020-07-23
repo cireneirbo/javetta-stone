@@ -2,7 +2,7 @@ package javatojavascript;
 
 import java.util.Arrays;
 
-public class StringSplitter {
+public class StringSplitter{
 
     private String exampleJavaProject;
     private String[] splitExampleJavaProject;
