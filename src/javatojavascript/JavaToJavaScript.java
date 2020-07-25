@@ -8,31 +8,25 @@ public abstract class JavaToJavaScript {
         //String javaScriptTranslation = "";
 
         if (line.equals("public static void main(String[] args) {")){
-            return "W";
+            return "function main() { ";
         } if (line.equals("String stringQuestion = \"What is the difference between\\n\" +")){
-            return "W";
+            return "    const stringQuestion = \"What is the difference between\\n\" +";
         } if (line.equals("\"a ' and a \\\"?  Or between a \\\" and a \\\\\\\"?\";")){
-            return "W";
+            return "        \"a ' and a \\\"?  Or between a \\\" and a \\\\\\\"?\";";
         } if (line.equals("String stringAnswer = \"One is what we see when we're typing our program.\\n\" +")){
-            return "W";
+            return "    const stringAnswer = \"One is what we see when we're typing our program.\\n\" +";
         } if (line.equals("\"The other is what appears on the \\\"console.\\\"\";")){
-            return "W";
+            return "        \"The other is what appears on the \\\"console.\\\"\";";
         } if (line.equals("Scanner input;")){
-            return "W";
-        } if (line.equals("input = new Scanner(System.in);")){
-            return "W";
+            return "    const input = require('readline-sync');";
         } if (line.equals("System.out.println(stringQuestion);")){
-            return "W";
-        } if (line.equals("String userAnswer = input.next();")){
-            return "W";
-        } if (line.equals("input.close();")){
-            return "W";
+            return "    let userAnswer = input.question(stringQuestion);";
         } if (line.equals("System.out.println(\"You said: \" + userAnswer);")){
-            return "W";
+            return "    console.log(\"You said: \" + userAnswer);";
         } if (line.equals("System.out.println(\"The answer: \" + stringAnswer);")){
-            return "W";
+            return "    console.log(\"The answer: \" + stringAnswer);";
         } if (line.equals("}")){
-            return "W";
+            return "}";
         } else {
             return ""; //blank line
         }

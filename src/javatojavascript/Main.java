@@ -46,33 +46,12 @@ public class Main extends JavaToJavaScript{
 
         for(int i = 0; i < splitJavaLines.size(); i++) {
             //System.out.println(splitJavaLines.get(i));
-            System.out.println(translateJavaLineToJavaScript(splitJavaLines.get(i)));
+            if (!translateJavaLineToJavaScript(splitJavaLines.get(i)).equals("")) {
+                System.out.println(translateJavaLineToJavaScript(splitJavaLines.get(i)));
+            }
         }
 
 
 
     }
 }
-
-/*
-//the actual js program required
-
-function main() { //public static void main(String[] args) {
-//
-    const stringQuestion = "What is the difference between\n" + //        String stringQuestion = "What is the difference between\n" +
-        "a ' and a \"?  Or between a \" and a \\\"?"; //                "a ' and a \"?  Or between a \" and a \\\"?";
-    const stringAnswer = "One is what we see when we're typing our program.\n" + //        String stringAnswer = "One is what we see when we're typing our program.\n" +
-        "The other is what appears on the \"console.\""; //                "The other is what appears on the \"console.\"";
-//
-const input = require('readline-sync'); //        Scanner input;
-//        input = new Scanner(System.in);
-let userAnswer = input.question(stringQuestion);//        System.out.println(stringQuestion);
-//        String userAnswer = input.next();
-//        input.close();
-console.log("You said: " + userAnswer);//        System.out.println("You said: " + userAnswer);
-console.log("The answer: " + stringAnswer);//        System.out.println("The answer: " + stringAnswer);
-} //   }
-
-main();
-
- */
